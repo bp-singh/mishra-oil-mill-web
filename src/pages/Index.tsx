@@ -1,4 +1,3 @@
-
 import { Phone, MapPin, Mail, Factory, Droplets, Leaf, Heart, Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -27,9 +26,17 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4 text-center">
+      {/* Hero Section with Background Image */}
+      <section className="py-12 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1200&h=800&fit=cover" 
+            alt="Oil mill machinery" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-50/80 to-orange-100/80"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-bold text-amber-800 mb-6">
               Pure Mustard Oil
@@ -87,14 +94,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Products Section with Images */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-12">
             Our Premium Products
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-amber-200">
+            <Card className="hover:shadow-xl transition-shadow duration-300 border-amber-200 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=300&fit=cover" 
+                  alt="Cold-pressed mustard oil"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardContent className="p-6 text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
                   <Droplets className="h-10 w-10 text-white" />
@@ -109,7 +123,14 @@ const Index = () => {
               </CardContent>
             </Card>
             
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-amber-200">
+            <Card className="hover:shadow-xl transition-shadow duration-300 border-amber-200 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=300&fit=cover" 
+                  alt="Organic mustard seeds"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardContent className="p-6 text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
                   <Leaf className="h-10 w-10 text-white" />
@@ -124,7 +145,14 @@ const Index = () => {
               </CardContent>
             </Card>
             
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-amber-200">
+            <Card className="hover:shadow-xl transition-shadow duration-300 border-amber-200 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1609501676725-7186f899a5d1?w=400&h=300&fit=cover" 
+                  alt="Premium mustard oil bottles"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardContent className="p-6 text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center">
                   <Heart className="h-10 w-10 text-white" />
@@ -142,39 +170,68 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section with Factory Images */}
       <section className="py-16 bg-gradient-to-br from-amber-100 to-orange-200">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl md:text-4xl font-bold text-amber-800 mb-8">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-3xl md:text-4xl font-bold text-amber-800 mb-8 text-center">
               About Mishra & Brothers Oil Mill
             </h3>
-            <p className="text-lg text-amber-700 mb-6 leading-relaxed">
-              With decades of experience in mustard oil extraction, Mishra & Brothers Oil Mill has been serving 
-              the community with the finest quality mustard oil. Our traditional cold-press extraction method 
-              ensures that all the natural nutrients and flavor are preserved.
-            </p>
-            <p className="text-lg text-amber-700 mb-8 leading-relaxed">
-              We believe in maintaining the highest standards of purity and quality, blessed by the divine 
-              grace of श्री बालाजी महाराज. Every drop of our oil carries the essence of tradition, 
-              purity, and devotion.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-800">25+</div>
-                <div className="text-amber-600">Years Experience</div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <p className="text-lg text-amber-700 mb-6 leading-relaxed">
+                  With decades of experience in mustard oil extraction, Mishra & Brothers Oil Mill has been serving 
+                  the community with the finest quality mustard oil. Our traditional cold-press extraction method 
+                  ensures that all the natural nutrients and flavor are preserved.
+                </p>
+                <p className="text-lg text-amber-700 mb-8 leading-relaxed">
+                  We believe in maintaining the highest standards of purity and quality, blessed by the divine 
+                  grace of श्री बालाजी महाराज. Every drop of our oil carries the essence of tradition, 
+                  purity, and devotion.
+                </p>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-800">100%</div>
-                <div className="text-amber-600">Pure Oil</div>
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=300&h=200&fit=cover" 
+                  alt="Traditional oil extraction machine"
+                  className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=300&h=200&fit=cover" 
+                  alt="Mustard oil mill interior"
+                  className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                />
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-800">1000+</div>
-                <div className="text-amber-600">Happy Customers</div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&h=400&fit=cover" 
+                  alt="Modern oil mill facility"
+                  className="rounded-lg shadow-lg w-full"
+                />
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-800">24/7</div>
-                <div className="text-amber-600">Service</div>
+              <div className="order-1 lg:order-2">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-amber-800">25+</div>
+                    <div className="text-amber-600">Years Experience</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-amber-800">100%</div>
+                    <div className="text-amber-600">Pure Oil</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-amber-800">1000+</div>
+                    <div className="text-amber-600">Happy Customers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-amber-800">24/7</div>
+                    <div className="text-amber-600">Service</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
